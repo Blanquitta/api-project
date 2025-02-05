@@ -24,7 +24,18 @@ fetch("https://api.github.com/users/Blanquitta/repos")
     // console.log (searchWord);
 
     const userName = "artic";
-     const searchurl = "https://api.artic.edu/api/v1/artworks/126511"
+     const searchurl = "https://api.artic.edu/api/v1/artworks/126511"  
+     fetch('https://api.artic.edu/api/v1/artworks/75644?fields=id,title,image_id,alt_image_ids')
+     .then(response => response.json())
+    .then(data => {
+        const imgContainer = document.getElementById('img-container');
+        data.forEach(item => {
+            const img = document.createElemte('img');
+            img.src = item.imageUrl;
+            imgContainer.appendChild(img);
+            console.log(data);
+        })
+     })
      fetch(searchurl)
      .then(response => {
      
@@ -40,7 +51,7 @@ fetch("https://api.github.com/users/Blanquitta/repos")
     .then((data ) => {
         // Get artwork list
         console.log(data);
-        const artworkList = [...data.data];
+        const artworkList = [data];
 
         console.log(artworkList);
         console.log("length =", artworkList.length);
@@ -49,10 +60,10 @@ fetch("https://api.github.com/users/Blanquitta/repos")
             artworkList[0].id = 129884;
         }
     
-        //Array get a valid artworkimage id
-        const randomInt = Math.floor(math.random() + artworkList.length);
-        const randomId = artworkList[randomInt].id;
-        console.log(randomId);
+        // //Array get a valid artworkimage id
+        // const randomInt = Math.floor(math.random() + artworkList.length);
+        // const randomId = artworkList[randomInt].id;
+        // console.log(randomId);
 
 })
         const url =` https://api.artic.edu/api/v1/artworks/${randomId}`;
