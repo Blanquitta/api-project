@@ -1,2 +1,24 @@
+body {
+  background-color: #f0f0f0a6;
+  font-family: Arial, sans-serif;
+}
 
-  
+img {
+  max-width: 20rem;
+}
+h1 {
+  color: #333333c9;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.artwork {
+  border: 4px solid #333333c9;
+  padding: 12px;
+  margin: 12px 0;
+}
+.artwork h2 {
+  margin: 0 0 6px;
+}
