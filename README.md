@@ -1,2 +1,1 @@
-[My Open API Project](https://github.com/Blanquitta/api-project) 
-
+[My Open API Project](https://github.com/Blanquitta/api-project)
